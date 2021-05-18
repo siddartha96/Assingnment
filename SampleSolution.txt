@@ -1,0 +1,84 @@
+ # Sample Question
+
+// pseudo code
+
+print "Enter the tests to be run"
+
+if (NoOfTests < 1 or NoofTests>100)
+	print "if correct NoofTests"
+
+else
+	AddNum1=array("i");
+	AddNum2=array("i");
+
+Read Noofinputs
+calculate for index in range(0, NoOfTests)
+	print "Enter No Of separated by space"
+
+	AddNum1.insert(index, int (Num1);
+	AddNum2.insert(index, int (Num2);
+
+Initialize index = 0;
+
+while Number1 > 0 or Number2>0
+add digitAddition = int ((digit1 + digit2) % 10)
+print "digitAddition";
+
+for index in range 0 NoofTests
+print "index"
+
+
+
+// code
+
+public static void main(String[] args) // main function
+	{
+	  long t; // declaring the Long variabel i,e t
+
+	  t = Long.parseLong(ConsoleInput.readToWhiteSpace(true)); // reading the input from the console.input in dynamically
+	 
+ while ((t--) != 0) // checking the condtion t!=0
+	  {
+		String a; // declaring the 2 String variables
+		String b;
+
+		a = ConsoleInput.readToWhiteSpace(true); // getting input from console
+		b = ConsoleInput.readToWhiteSpace(true);
+
+		if (a.length() < b.length()) 
+		{
+			int temp=a;
+			a=b;
+			b=temp;
+		}
+
+		long max_last = Math.max(a.length(), b.length());
+		long min_last = Math.min(a.length(), b.length());
+
+		long[] result = new long[max_last];
+		long i = max_last - 1;
+
+		for (long j = min_last - 1; j >= 0; i--, j--)// if the variable indicates postion like unit or tens place
+		{
+
+			result[i] = (a.charAt(i) - '0' + b.charAt(j) - '0') % 10;
+
+		}
+
+		while (i >= 0)
+		{
+			result[i] = (a.charAt(i) - '0') % 10;
+			i--;
+		}
+
+		long sum = 0;
+		for (long i = 0; i < max_last; i++)
+		{
+			sum = sum * 10 + result[i];
+		}
+		System.out.print(sum);
+		System.out.print("\n");
+
+	  }
+	}
+}
